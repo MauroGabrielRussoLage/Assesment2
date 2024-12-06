@@ -2,13 +2,11 @@ package model;
 
 import model.interfaces.Patient;
 
-import java.io.Serializable;
-
 public class AdultPatient extends Patient {
 
-    private boolean isWorking;
-    private boolean smoked;
-    private boolean drinked;
+    private boolean working;
+    private boolean smoker;
+    private boolean alcoholism;
 
     public AdultPatient(String name, int age, long ID) {
         setName(name);
@@ -17,27 +15,27 @@ public class AdultPatient extends Patient {
     }
 
     public boolean isWorking() {
-        return isWorking;
+        return working;
     }
 
     public void setWorking(boolean working) {
-        isWorking = working;
+        this.working = working;
     }
 
-    public boolean isSmoked() {
-        return smoked;
+    public boolean isSmoker() {
+        return smoker;
     }
 
-    public void setSmoked(boolean smoked) {
-        this.smoked = smoked;
+    public void setSmoker(boolean smoker) {
+        this.smoker = smoker;
     }
 
-    public boolean isDrinked() {
-        return drinked;
+    public boolean hasAlcoholism() {
+        return alcoholism;
     }
 
-    public void setDrinked(boolean drinked) {
-        this.drinked = drinked;
+    public void setAlcoholism(boolean alcoholism) {
+        this.alcoholism = alcoholism;
     }
 
     public String toString() {
@@ -45,6 +43,8 @@ public class AdultPatient extends Patient {
         sb.append("Name: " + getName() + "\n");
         sb.append("Age: " + getAge() + "\n");
         sb.append("ID: " + getID() + "\n");
+        sb.append("Smoker: " + (isSmoker() ? "Yes" : "No") + "\n");
+        sb.append("Alcoholism: " + (hasAlcoholism() ? "Yes" : "No") + "\n");
         return sb.toString();
     }
 }

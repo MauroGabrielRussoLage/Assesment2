@@ -4,7 +4,7 @@ import model.interfaces.Patient;
 
 public class PediatricPatient extends Patient {
 
-    private int gestionalAge;
+    private int gestationalAge;
     private double birthWeight;
     private boolean immunization;
 
@@ -14,12 +14,12 @@ public class PediatricPatient extends Patient {
         setAge(age);
     }
 
-    public int getGestionalAge() {
-        return gestionalAge;
+    public int getGestationalAge() {
+        return gestationalAge;
     }
 
-    public void setGestionalAge(int gestionalAge) {
-        this.gestionalAge = gestionalAge;
+    public void setGestationalAge(int gestationalAge) {
+        this.gestationalAge = gestationalAge;
     }
 
     public double getBirthWeight() {
@@ -30,7 +30,7 @@ public class PediatricPatient extends Patient {
         this.birthWeight = birthWeight;
     }
 
-    public boolean isImmunization() {
+    public boolean hasImmunization() {
         return immunization;
     }
 
@@ -43,6 +43,9 @@ public class PediatricPatient extends Patient {
         sb.append("Name: " + getName() + "\n");
         sb.append("Age: " + getAge() + "\n");
         sb.append("ID: " + getID() + "\n");
+        sb.append("Gestational Age: " + gestationalAge + "\n");
+        sb.append("Birth Weight: " + birthWeight + "\n");
+        sb.append("Immunization: " + (hasImmunization() ? "Yes" : "No") + "\n");
         return sb.toString();
     }
 }
