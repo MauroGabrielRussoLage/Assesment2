@@ -43,6 +43,7 @@ public class AdultPatient extends Patient {
         sb.append("Name: " + getName() + "\n");
         sb.append("Age: " + getAge() + "\n");
         sb.append("ID: " + getID() + "\n");
+        sb.append("Works: " + (isWorking() ? "Yes" : "No") + "\n");
         sb.append("Smoker: " + (isSmoker() ? "Yes" : "No") + "\n");
         sb.append("Alcoholism: " + (hasAlcoholism() ? "Yes" : "No") + "\n");
         return sb.toString();
